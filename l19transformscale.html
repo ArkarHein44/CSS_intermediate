@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition width</title>
+    <style>
+        .container{
+            width: 1000px;
+            background-color: gray;
+            /* margin: 10px 0; */
+
+            /* rem (root element's font size) */
+            /* 1rem = 16px; */
+            margin: 1rem;
+
+
+        }   
+        .container .square{
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            color: #fff;
+            font-size: 20px;
+
+            text-align: center;
+            line-height: 50px;
+
+            border-radius: 3px;
+
+            transition-property: transform;
+            transition-duration: .5s;
+            transition-timing-function: linear;
+
+        }     
+
+        #scale:hover{
+            /* scale(anglexy) */
+            /* transform: scale(0); */
+            /* transform: scale(1); */
+            /* transform: scale(1.5); */
+            transform: scale(2);
+        }
+        
+        #scalexy:hover{
+            /* scale(x,y); */
+            /* transform: scale(1,2); */
+            /* transform: scale(2,1); */
+            transform: scale(2,3);
+        }
+
+        #scalex:hover{
+            /* scaleX(angleX) */
+            /* transform: scaleX(0.5); */
+            transform: scaleX(2);
+        }
+
+
+        #scaley:hover{
+            /* scaleY(angleY) */
+            /* transform: scaleY(0.5); */
+            transform: scaleY(2);
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="square" id="scale">DIV1 XY</div>
+    </div>
+    <div class="container">
+        <div class="square" id="scalexy">DIV2 X</div>
+    </div>
+    <div class="container">
+        <div class="square" id="scalex">DIV3 Y</div>
+    </div>
+    <div class="container">
+        <div class="square" id="scaley">DIV3 Y</div>
+    </div>
+    
+
+
+</body>
+</html>
+
+<!-- 2TS -->

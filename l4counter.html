@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style type="text/css">
+
+
+        h1{
+            counter-reset: idx;
+        }
+
+        h2:before{
+            counter-increment:idx;
+            /* content: counter(idx); */
+            content: "Section " counter(idx) ": ";
+        }
+        h2{
+            color: green;
+            counter-reset: subidx;
+        }
+        h3{
+            color: blue;
+        }
+        h3::before{
+            counter-increment: subidx;
+            content: "Lesson : " counter(idx)"."counter(subidx)": ";
+        }
+    </style>
+</head>
+<body>
+    <h1>DLT Lessons</h1>
+
+    <h2>Web Developnment Foundation</h2>
+    <h3>HTML</h3>
+    <h3>CSS</h3>
+    <h3>Javascript</h3>
+    <h3>bootstrap</h3>
+    <h3>github</h3>
+
+    <h2>CSS Class</h2>
+    <h3>css intermediate</h3>
+    <h3>bootstrap</h3>
+    <h3>tailwind css</h3>
+
+    <h2>Javascript Class</h2>
+    <h3>Jquery</h3>
+    <h3>Javascript es6</h3>
+    <h3>react ja</h3>
+    <h3>node js</h3>
+
+    <h2>Database Class</h2>
+    <h3>mysql</h3>
+    <h3>mongo db</h3>
+   
+    <h2>PHP Class</h2>
+    <h3>php oop</h3>
+    <h3>laravel</h3>    
+
+</body>
+</html>

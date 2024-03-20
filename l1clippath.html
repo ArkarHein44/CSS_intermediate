@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clip path</title>
+    <style type="text/css">
+      
+       .square{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+       }
+
+       .circle{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+        border-radius: 50%;
+       }
+
+       .triangle{
+        width: 0;
+        height: 0;
+        /* background-color: black; */
+
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid steelblue;
+
+        /* border-left: 100px solid steelblue;
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid transparent; */
+
+        /* border-left: 100px solid transparent;
+        border-right: 100px solid steelblue;
+        border-bottom: 100px solid transparent; */
+
+       }
+
+       .squareshape{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+
+        float: left;
+        margin-right: 20px;
+       }
+
+       .circleshape{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+        
+        /* border-radius: 50%; */
+        /* overflow: hidden; */
+
+        clip-path: circle();
+        float: left;
+        margin-right: 20px;
+
+        shape-outside: circle();
+        
+       }
+
+       .ellipseshape{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+
+        /* ellipse(width height) */
+        clip-path: ellipse(50% 70%);
+        shape-outside: ellipse(50% 70%);
+
+        float: left;
+        margin-right: 20px;
+       }
+
+       .polygonshape{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+
+        clip-path: polygon(50% 0, 0 50%, 40% 50%, 25% 100%, 75% 100%, 62% 52%, 100% 50%);
+
+        shape-outside: polygon(50% 0, 0 50%, 40% 50%, 25% 100%, 75% 100%, 62% 52%, 100% 50%);;
+
+        float: left;
+        margin-right: 20px;
+
+       }
+    </style>
+</head>
+<body>
+    <div class="square">Square</div>   
+    <hr/>
+
+    <div class="circle">Circle</div>
+    <hr/>
+
+    <div class="triangle">Triangle</div>
+    <hr/>
+
+    <div>
+        <div class="squareshape">square</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatum vero, ratione, inventore eligendi atque ad, accusamus odio voluptas et ea accusantium ipsum voluptate libero provident nam numquam dicta tempore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, commodi quia enim ex consectetur fugiat dicta repellat. Odit labore quaerat facere aliquam. Officia accusamus repellat deserunt possimus deleniti earum quae!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sunt facere nam aperiam repudiandae cupiditate eaque facilis voluptas dicta, dignissimos harum error qui dolore fugiat, in saepe quasi. Tempore, vel! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, consequuntur accusantium fuga sunt veniam ab consectetur et! Laborum repellendus praesentium molestiae dignissimos saepe suscipit optio cupiditate. Molestiae deleniti ipsum laudantium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam ipsum deleniti tempora quas nisi, quod esse expedita aperiam asperiores voluptate ducimus itaque numquam amet maxime minima illum ab nulla? Eligendi!</p>
+    </div>
+    <hr/>
+
+    <div>
+        <div class="circleshape">circle</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatum vero, ratione, inventore eligendi atque ad, accusamus odio voluptas et ea accusantium ipsum voluptate libero provident nam numquam dicta tempore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, commodi quia enim ex consectetur fugiat dicta repellat. Odit labore quaerat facere aliquam. Officia accusamus repellat deserunt possimus deleniti earum quae!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sunt facere nam aperiam repudiandae cupiditate eaque facilis voluptas dicta, dignissimos harum error qui dolore fugiat, in saepe quasi. Tempore, vel! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, consequuntur accusantium fuga sunt veniam ab consectetur et! Laborum repellendus praesentium molestiae dignissimos saepe suscipit optio cupiditate. Molestiae deleniti ipsum laudantium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam ipsum deleniti tempora quas nisi, quod esse expedita aperiam asperiores voluptate ducimus itaque numquam amet maxime minima illum ab nulla? Eligendi!</p>
+    </div>
+    <hr/>
+
+    <div>
+        <div class="ellipseshape">ellipse</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatum vero, ratione, inventore eligendi atque ad, accusamus odio voluptas et ea accusantium ipsum voluptate libero provident nam numquam dicta tempore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, commodi quia enim ex consectetur fugiat dicta repellat. Odit labore quaerat facere aliquam. Officia accusamus repellat deserunt possimus deleniti earum quae!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sunt facere nam aperiam repudiandae cupiditate eaque facilis voluptas dicta, dignissimos harum error qui dolore fugiat, in saepe quasi. Tempore, vel! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, consequuntur accusantium fuga sunt veniam ab consectetur et! Laborum repellendus praesentium molestiae dignissimos saepe suscipit optio cupiditate. Molestiae deleniti ipsum laudantium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam ipsum deleniti tempora quas nisi, quod esse expedita aperiam asperiores voluptate ducimus itaque numquam amet maxime minima illum ab nulla? Eligendi!</p>
+    </div>
+    <hr/>
+
+    <div>
+        <div class="polygonshape">Polygon</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatum vero, ratione, inventore eligendi atque ad, accusamus odio voluptas et ea accusantium ipsum voluptate libero provident nam numquam dicta tempore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, commodi quia enim ex consectetur fugiat dicta repellat. Odit labore quaerat facere aliquam. Officia accusamus repellat deserunt possimus deleniti earum quae!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sunt facere nam aperiam repudiandae cupiditate eaque facilis voluptas dicta, dignissimos harum error qui dolore fugiat, in saepe quasi. Tempore, vel! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, consequuntur accusantium fuga sunt veniam ab consectetur et! Laborum repellendus praesentium molestiae dignissimos saepe suscipit optio cupiditate. Molestiae deleniti ipsum laudantium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam ipsum deleniti tempora quas nisi, quod esse expedita aperiam asperiores voluptate ducimus itaque numquam amet maxime minima illum ab nulla? Eligendi!</p>
+    </div>
+</body>
+</html>
+<!-- 27CP -->         

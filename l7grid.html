@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grip</title>
+    <style type="text/css">
+       body{
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+       .container{
+        width: 1200px;
+        background-color: gray;
+        display: grid;     
+
+        /* =>Fractional Unit(fr) */
+        /* grid-template-columns: 1fr; */
+        /* grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr; */
+
+        /* grid-template-columns: 100px 1fr; */
+        /* grid-template-columns: 1fr 100px; */
+        grid-template-columns: 1fr 100px 100px 100px;
+
+
+       }
+
+       .container > *{
+        /* width: 200px; */
+        height: 100px;
+       }
+
+       .container div:nth-of-type(odd){
+        background-color: steelblue;
+       }
+
+       .container div:nth-of-type(even){
+        background-color: skyblue;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="div">This is DIV 1</div>
+        <div class="div">This is DIV 2</div>
+        <div class="div">This is DIV 3</div>
+        <div class="div">This is DIV 4</div>
+        <div class="div">This is DIV 5</div>
+        <div class="div">This is DIV 6</div>
+        <div class="div">This is DIV 7</div>
+        <div class="div">This is DIV 8</div>
+        <div class="div">This is DIV 9</div>
+        <div class="div">This is DIV 10</div>
+    </div>
+</body>
+</html>
+
