@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Effect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+        height: 100vh;
+        background-color: black;
+
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+ 
+      .btn{
+        width: 300px;
+        height: 80px;
+       
+        background-color:black;
+        border: none;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        
+        cursor: pointer;
+        position: relative;
+      }
+      
+    
+      .btn::before{
+        content: "";
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background:linear-gradient(70deg,blue,red,orange,pink,green,orange,red,pink,yellow,blue);
+        
+        background-size: 400px;
+        border-radius: inherit;
+     
+        position: absolute;
+        left: -2px;
+        top: -2px;
+
+        opacity: 0;
+        z-index: -1;
+        transition:all .5s;
+
+      }
+      
+      .btn:hover::before{
+        opacity: 1;
+        animation: lighting 10s linear infinite;
+      }
+      .btn:active{
+       background: transparent;
+        color: black;
+      }
+      @keyframes lighting {
+        0%{
+            background-position: 0;
+        }
+        50%{
+            background-position: 500% 0;
+        }  
+        100%{
+            background-position: 0 0;
+        }
+      }
+     
+     
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btn">Hover Me . Press Me</button>
+  </body>
+</html>

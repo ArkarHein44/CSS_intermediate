@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyframes</title>
+    <style type="text/css">
+
+       body{
+        padding: 0;
+        margin: 0;
+       }
+
+       .box{
+        width: 150px;
+        height: 150px;
+        background-color: steelblue;
+
+        animation-name: myani;
+        animation-duration: 5s; /* 5000ms */
+       }
+
+       @keyframes myani {
+    
+        /* 0%{
+            transform: translate(0px);
+        }
+        50%{
+            transform: translate(500px);
+        }
+        100%{
+            transform: translateY(1000px);
+        }         */
+        
+        0%{
+            transform: translate(0px);
+        }
+        50%{
+            transform: translate(500px);
+        }
+        100%{
+            /* transform: translateX(500px)  translateY(1000px); */
+            transform: translate(500px,1000px);
+        }        
+       }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>
+
+<!-- att code::  -->
